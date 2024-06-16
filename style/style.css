@@ -1,0 +1,1344 @@
+/*Отримай знижку*/
+
+.modal-discount {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.modal-discount.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-discount__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 11px;
+    background: #FFF;
+    max-width: 900px;
+    max-height: 590px;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+}
+
+.modal-discount__left {
+    display: flex;
+    width: 439px;
+    box-sizing: border-box;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    background: #1C1B79;
+    position: relative;
+    height: 590px;
+}
+
+.modal-discount__left-icon1 {
+    position: absolute;
+    top: 20px;
+    right: 44px;
+}
+
+.modal-discount__left-icon2 {
+    position: absolute;
+    bottom: 20px;
+    left: 44px;
+}
+
+.modal-discount__right {
+    padding: 20px 20px 32px 20px;
+    width: 450px;
+    height: 590px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-discount__close {
+    width: 48px;
+    height: 48px;
+    min-height: 48px;
+    background: url(../image/modal-discount__close.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    position: relative;
+    margin-left: auto;
+    margin-bottom: 40px;
+}
+
+.modal-discount__close::after {
+    content: "";
+    background: url(../image/modal-discount__close-btn.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 13px;
+    transform: translate(-50%, -50%);
+}
+
+.modal-discount__right-content {
+    padding-left: 27px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 32px;
+}
+
+.modal-discount__right-content h2 {
+    color: #1C1B79;
+    font-family: "Golos Text", sans-serif;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -3.6px;
+    text-transform: uppercase;
+    margin-bottom: 56px;
+}
+
+.modal-discount__right-content h3 {
+    color: #1C1B79;
+    font-family: "Golos Text", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.64px;
+    margin-bottom: 16px;
+}
+
+.modal-discount__right-content h3 span {
+    color: #1C1B79;
+    font-family: "Golos Text", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.8px;
+}
+
+.modal-discount__right-content p {
+    color: #1C1B79;
+    font-family: "Golos Text", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.16px;
+}
+
+.modal-discount__right-form {
+    padding-left: 27px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.modal-discount__right-form input {
+    width: 100%;
+    padding: 16px 0px 16px 8px;
+    box-sizing: border-box;
+    color: rgba(23, 23, 92, 0.46);
+    font-family: "Golos Text", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+    border: none;
+    border-bottom: 1px solid rgba(28, 27, 121, 0.31);
+}
+
+.modal-discount__right-form input::-webkit-input-placeholder {
+    color: rgba(23, 23, 92, 0.46);
+    font-family: "Golos Text", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+}
+
+.modal-discount__right-form input::-moz-placeholder {
+    color: rgba(23, 23, 92, 0.46);
+    font-family: "Golos Text", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+}
+
+.modal-discount__right-form input:-ms-input-placeholder {
+    color: rgba(23, 23, 92, 0.46);
+    font-family: "Golos Text", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+}
+
+.modal-discount__right-form input::-ms-input-placeholder {
+    color: rgba(23, 23, 92, 0.46);
+    font-family: "Golos Text", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+}
+
+.modal-discount__right-form input::placeholder {
+    color: rgba(23, 23, 92, 0.46);
+    font-family: "Golos Text", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+}
+
+.modal-discount__right-form button {
+    width: 100%;
+    padding: 16px 32px;
+    box-sizing: border-box;
+    color: #FFF;
+    font-family: "Golos Text", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.84px;
+    text-transform: uppercase;
+    background: #1C1B79;
+    border: none;
+}
+
+.modal-discount__left-video video {
+    width: 337px;
+    height: 515px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-mask-image: url(../image/video.svg);
+    mask-image: url(../image/video.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+}
+
+
+/*Чому?*/
+
+.why-section {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.why-section .wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    gap: 87px 62px;
+}
+
+.why-section__content {
+    display: flex;
+    width: 386px;
+    height: 381px;
+    padding-left: 60px;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.why-section__content-title {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.why-section__content-title p {
+    color: #1C1B79;
+    font-family: "Golos Text", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+}
+
+.why-section__content-title h2 {
+    font-family: "Golos Text", sans-serif;
+    color: #1C1B79;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    text-transform: uppercase;
+}
+
+.why-section__content .why-section__content-title-nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.why-section-next {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    background: url(../image/arrow-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.why-section-next img {
+    width: 18px;
+    height: 12px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.why-section-prev {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    background: url(../image/arrow-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.why-section-prev img {
+    width: 18px;
+    height: 12px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.why-section__slider .why-section__content-title-nav {
+    display: none;
+}
+
+.why-section__slider {
+    width: calc(100% - 443px);
+}
+
+.why-section__slide {
+    max-width: 424px;
+}
+
+.why-section__slide-content {
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-mask-image: url(../image/bg-slide.svg);
+    mask-image: url(../image/bg-slide.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    height: 381px;
+    display: flex;
+    width: 421px;
+    height: 376px;
+    padding: 30px 50px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.why-section__slide-content-blue {
+    background: #1C1B79;
+}
+
+.why-section__slide-content-white {
+    background: url(../image/bg-slide.svg), #fff;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.why-section__slide-content span {
+    font-family: "Golos Text", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.16px;
+}
+
+.why-section__slide-content h3 {
+    font-family: "Golos Text", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.48px;
+}
+
+.why-section__slide-content div {
+    font-family: "Golos Text", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.32px;
+}
+
+.why-section__slide-content div a {
+    font-family: "Golos Text", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.32px;
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+}
+
+.why-section__slide-content-blue {
+    color: #fff;
+}
+
+.why-section__slide-content-blue a {
+    color: #fff;
+}
+
+
+/*ДОДАТКОВІ ПЕРЕВАГИ ДЛЯ ТЕБЕ*/
+
+
+.benefits {
+    display: flex;
+    max-width: 1440px;
+    padding: 50px 60px 0 60px;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.benefits h2 {
+    color: #1C1B79;
+    font-family: "Golos Text", sans-serif;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    text-transform: uppercase;
+    max-width: 1320px;
+    margin: 0 auto 40px auto;
+    text-align: left;
+    width: 100%;
+}
+
+.benefits-item {
+    padding: 32px 0;
+    max-width: 1320px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-top: 1px solid rgba(28, 27, 121, 0.10);
+    border-bottom: 1px solid rgba(28, 27, 121, 0.10);
+    cursor: pointer;
+    display: flex;
+    gap: 16px;
+    transition: all 0.5s;
+}
+
+.benefits .benefits-item:nth-of-type(2) {
+    border: none;
+}
+
+.benefits-header {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    align-self: stretch;
+    width: 421px;
+    min-width: 421px;
+    transition: all 0.5s ease;
+}
+
+.benefits-header h3 {
+    color: #1C1B79;
+    font-family: "Golos Text", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -0.24px;
+}
+
+.benefits-header-icon {
+    width: 17px;
+    height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.benefits-content {
+    max-height: 0;
+    overflow: hidden;
+    color: #FFF;
+    font-family: "Golos Text", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.16px;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.benefits-item.active .benefits-content {
+    max-height: 88px;
+    transition: all 0.5s;
+}
+
+.benefits-item.active {
+    background: #1C1B79;
+    max-width: 1440px;
+    padding: 32px 60px;
+    transition: all 0.5s;
+}
+
+.benefits-item.active .benefits-header-icon {
+    transform: rotate(90deg);
+    transition: all 0.5s;
+}
+
+.benefits-item.active .benefits-header-icon img {
+    content: url('../image/accardion-arrow.svg');
+    transition: all 0.5s;
+}
+
+.benefits-item.active .benefits-header h3 {
+    color: #FFF;
+    transition: all 0.5s;
+}
+
+@media (min-width: 1280px) {
+    .benefits-item:hover .benefits-content {
+        max-height: 88px;
+        transition: all 0.5s;
+    }
+
+    .benefits-item:hover {
+        background: #1C1B79;
+        max-width: 1440px;
+        padding: 32px 60px;
+        transition: all 0.5s;
+    }
+
+    .benefits-item:hover .benefits-header-icon {
+        transform: rotate(90deg);
+        transition: all 0.5s;
+    }
+
+    .benefits-item:hover .benefits-header-icon img {
+        content: url('../image/accardion-arrow.svg');
+        transition: all 0.5s;
+    }
+
+    .benefits-item:hover .benefits-header h3 {
+        color: #FFF;
+        transition: all 0.5s;
+    }
+}
+
+
+/*Тариф*/
+
+.tariff-plan {
+    max-width: 1440px;
+    margin: 66px auto 0 auto;
+    background: #1C1B79;
+}
+
+.tariff-plan__box {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 92px 60px;
+    justify-content: space-between;
+    flex: 1 0 0;
+}
+
+.tariff-plan__card-white {
+    background: url(../image/tariff-bg-white.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 622px;
+    width: 100%;
+    height: 1193px;
+    padding: 80px 41.5px 65px 44.5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.tariff-plan__card-blue {
+    background: url(../image/tariff-bg-blue.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 622px;
+    height: 1193px;
+    box-sizing: border-box;
+    padding: 80px 41.5px 65px 44.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.tariff-plan__card-info {
+    margin-top: auto;
+}
+
+.tariff-plan__card h2 {
+    text-align: center;
+    font-family: "Golos Text", sans-serif;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.9px;
+    text-transform: uppercase;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto 40px auto;
+}
+
+
+.tariff-plan__card-white h2 {
+    color: #1C1B79;
+}
+
+.tariff-plan__card-blue h2 {
+    color: #fff;
+}
+
+.tariff-plan__card-item {
+    display: flex;
+    max-width: 523px;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%;
+    margin-bottom: 27.3px;
+}
+
+.tariff-plan__card-item:nth-last-of-type(1) {
+    margin-bottom: 0;
+}
+
+.tariff-plan__card-white .tariff-plan__card-item .tariff-plan__card-item-img {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    background: #1C1B79;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tariff-plan__card-blue .tariff-plan__card-item .tariff-plan__card-item-img {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tariff-plan__card-item-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.tariff-plan__card-blue .tariff-plan__card-item .tariff-plan__card-item-content h3 {
+    color: #FFF;
+    font-family: "Golos Text", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 140%;
+    letter-spacing: -0.18px;
+}
+
+.tariff-plan__card-blue .tariff-plan__card-item .tariff-plan__card-item-content p {
+    color: #FFF;
+    font-family: "Golos Text", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: -0.18px;
+}
+
+.tariff-plan__card-white .tariff-plan__card-item .tariff-plan__card-item-content h3 {
+    color: #1C1B79;
+    font-family: "Golos Text", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 140%;
+    letter-spacing: -0.18px;
+}
+
+.tariff-plan__card-white .tariff-plan__card-item .tariff-plan__card-item-content p {
+    color: #1C1B79;
+    font-family: "Golos Text", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: -0.18px;
+}
+
+.tariff-plan__card-info-btn {
+    display: flex;
+    width: 540px;
+    align-items: flex-start;
+}
+
+.tariff-plan__card-info-blue {
+    max-width: 267px;
+    padding: 12px 38px;
+    height: 62px;
+    box-sizing: border-box;
+    color: #1C1B79;
+    background: #fff;
+    text-align: center;
+    font-family: "Golos Text", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.84px;
+    text-transform: uppercase;
+    border: 1px solid #1C1B79;
+}
+
+.tariff-plan__card-info-white {
+    width: 270px;
+    padding: 12px 38px;
+    height: 62px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    border: 1px solid #FFF;
+    background: #1C1B79;
+    color: #FFF;
+    text-align: center;
+    font-family: "Golos Text", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.84px;
+    text-transform: uppercase;
+}
+
+.tariff-plan__card-item:nth-last-of-type(1) {
+    margin-bottom: 0;
+}
+
+.tariff-plan__card-info a {
+    margin: 40px auto 0 auto;
+    display: flex;
+    width: 277px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: #1C1B79;
+    text-align: center;
+    font-family: "Golos Text", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.tariff-plan__card-info a span {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #1C1B79;
+}
+
+.tariff-plan__card-blue .tariff-plan__card-info a {
+    color: #fff;
+}
+
+.tariff-plan__card-blue .tariff-plan__card-info a span {
+    background: #fff;
+}
+
+.tariff-plan__card .show-more-btn {
+    display: none;
+}
+
+.tariff-plan__card-img {
+    display: none;
+}
+
+.tariff-plan__card-box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+
+
+
+
+@media (max-width: 1370px) {
+    .tariff-plan__box {
+        padding: 92px 16px;
+    }
+}
+
+@media (max-width: 1260px) {
+    .tariff-plan__box {
+        flex-wrap: wrap;
+        gap: 32px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .modal-discount__right-content {
+        padding-left: 0;
+    }
+
+    .why-section {
+        padding-left: 60px;
+    }
+
+    .modal-discount__right-form {
+        padding-left: 0;
+    }
+
+    .why-section__content {
+        width: 200px;
+        padding-left: 0;
+    }
+
+    .why-section__slider {
+        width: calc(100% - 275px);
+    }
+
+    .benefits-item {
+        flex-direction: column;
+    }
+
+    .benefits-item.active {
+        padding: 32px 16px 24px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /*Отримай знижку*/
+    .modal-discount__wrapper {
+        max-width: 277px;
+        max-height: 493px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -webkit-mask-image: url(../image/modal-bg-mobile.svg);
+        mask-image: url(../image/modal-bg-mobile.svg);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: 100%;
+        mask-size: 100%;
+        padding: 27px 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .modal-discount__right {
+        padding: 0;
+        height: 100%;
+    }
+
+    .modal-discount__left {
+        display: none;
+    }
+
+    .modal-discount__close {
+        margin: 0 auto 10px auto;
+    }
+
+    .modal-discount__right-content h2 {
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: -2.4px;
+        text-transform: uppercase;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .modal-discount__right-content h3 {
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: -0.5px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .modal-discount__right-content h3 span {
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: -0.5px;
+    }
+
+    .modal-discount__right-content p {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        text-align: center;
+        letter-spacing: -0.16px;
+    }
+
+    .modal-discount__right-content {
+        margin-bottom: 10px;
+    }
+
+    .modal-discount__right-form {
+        padding: 0 5.5px;
+        margin-bottom: 0;
+        position: relative;
+    }
+
+    .modal-discount__right-form input {
+        padding: 16px 0px 16px 8px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: 0.56px;
+        text-transform: uppercase;
+    }
+
+    .modal-discount__right-form input::-webkit-input-placeholder {
+        padding: 16px 0px 16px 8px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: 0.56px;
+        text-transform: uppercase;
+    }
+
+    .modal-discount__right-form input::-moz-placeholder {
+        padding: 16px 0px 16px 8px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: 0.56px;
+        text-transform: uppercase;
+    }
+
+    .modal-discount__right-form input:-ms-input-placeholder {
+        padding: 16px 0px 16px 8px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: 0.56px;
+        text-transform: uppercase;
+    }
+
+    .modal-discount__right-form input::-ms-input-placeholder {
+        padding: 16px 0px 16px 8px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: 0.56px;
+        text-transform: uppercase;
+    }
+
+    .modal-discount__right-form input::placeholder {
+        padding: 16px 0px 16px 8px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: 0.56px;
+        text-transform: uppercase;
+    }
+
+
+
+    /*Чому?*/
+    .why-section {
+        padding: 36px 0 0 24.5px;
+    }
+
+    .why-section .wrapper {
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 80px;
+        position: relative;
+    }
+
+    .why-section__slider {
+        width: 100%;
+    }
+
+    .why-section__content {
+        width: 100%;
+        height: auto;
+        padding-right: 24.5px;
+        box-sizing: border-box;
+    }
+
+    .why-section__content-title h2 {
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+    }
+
+    .why-section__content-title {
+        align-items: center;
+        text-align: center;
+    }
+
+    .why-section__content .why-section__content-title-nav {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        padding-right: 24.5px;
+        box-sizing: border-box;
+        transform: translateX(-50%);
+    }
+
+    .why-section__slide-content {
+        display: flex;
+        width: 327px;
+        height: 376px;
+        padding: 30px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        flex-shrink: 0;
+    }
+
+    .why-section__slide {
+        max-width: 334px;
+        height: 376px;
+    }
+
+    .why-section__slide-content {
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+
+    .why-section__slide-content-blue {
+        background: url(../image/slider-bg-mobile-blue.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .why-section__slide-content-white {
+        background: url(../image/slider-bg-mobile-white.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+
+    /*ДОДАТКОВІ ПЕРЕВАГИ ДЛЯ ТЕБЕ*/
+    .benefits {
+        padding: 0;
+    }
+
+    .benefits h2 {
+        padding: 0 16px;
+        text-align: center;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        box-sizing: border-box;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    .benefits-item {
+        padding: 24px 0 8px 0;
+        margin: 0 16px;
+        max-width: calc(100% - 32px);
+        box-sizing: border-box;
+    }
+
+    .benefits-content {
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: -0.15px;
+    }
+
+    .benefits-header h3 {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: -0.2px;
+    }
+
+    .benefits-item.active {
+        padding: 24px 16px 24px 16px;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .benefits-item.active .benefits-content {
+        padding-left: 40px;
+    }
+
+    .benefits-header {
+        width: 100%;
+        min-width: 100%;
+        align-items: baseline;
+    }
+
+    /*Тариф*/
+    .tariff-plan__card-info-white {
+        display: none;
+    }
+
+    .tariff-plan__card-item.hidden {
+        display: none;
+    }
+
+    .tariff-plan__card .show-more-btn {
+        display: block;
+    }
+
+    .tariff-plan__card {
+        position: relative;
+        background: transparent;
+        height: auto;
+    }
+
+    .tariff-plan__card-img {
+        position: absolute;
+        width: 100%;
+        display: block;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-fit: fill;
+        object-fit: fill;
+        max-width: 100%;
+        z-index: 1;
+    }
+
+    .tariff-plan__card-box {
+        position: relative;
+        z-index: 2;
+    }
+
+    .tariff-plan__box {
+        padding: 30px 11px;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    .tariff-plan__card {
+        max-width: 475px;
+        padding: 0;
+    }
+
+    .tariff-plan__card-box {
+        padding: 80px 20px;
+        box-sizing: border-box;
+    }
+
+    .tariff-plan__card h2 {
+        color: #FFF;
+        text-align: center;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: -0.6px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+
+    .tariff-plan__card-info-btn {
+        width: 100%;
+    }
+
+    .tariff-plan__card-item-img {
+        width: 32px;
+        height: 32px;
+        background: #fff !important;
+    }
+
+    .tariff-plan__card-item-img img {
+        content: url("../image/tariff-icon-blue.svg") !important;
+    }
+
+    .tariff-plan__card-item {
+        margin-bottom: 24px;
+    }
+
+    .tariff-plan__card .tariff-plan__card-item .tariff-plan__card-item-content h3 {
+        color: #FFF;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 140%;
+        letter-spacing: -0.15px;
+    }
+
+    .tariff-plan__card .tariff-plan__card-item .tariff-plan__card-item-content p {
+        color: #FFF;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        letter-spacing: -0.15px;
+    }
+
+    .tariff-plan__card .show-more-btn {
+        background: transparent;
+        border: none;
+        color: #FFF;
+        text-align: center;
+        font-family: "Golos Text", sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: 0.56px;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+    }
+
+    .tariff-plan__card .show-more-btn::before {
+        content: "";
+        width: 100%;
+        display: block;
+        height: 1px;
+        margin-bottom: 24px;
+        background: rgba(255, 255, 255, 0.20);
+    }
+
+    .tariff-plan__card .show-more-btn span {
+        margin-right: 10px;
+    }
+
+    .tariff-plan__card-info-blue {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .tariff-plan__card-info a {
+        padding: 12px 38px;
+        height: 62px;
+        box-sizing: border-box;
+        color: #1C1B79 !important;
+        background: #fff;
+        text-align: center;
+        font-family: "Golos Text", sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+        letter-spacing: 0.84px;
+        text-transform: uppercase;
+        border: 1px solid #1C1B79;
+        width: 100%;
+        position: absolute;
+        bottom: -100px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .tariff-plan__box {
+        gap: 140px;
+    }
+
+    .tariff-plan__card-info a span {
+        display: none;
+    }
+
+    .tariff-plan__card-box {
+        padding-bottom: 130px;
+    }
+
+    .tariff-plan__box {
+        padding-bottom: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .tariff-plan__card {
+        max-width: 100%;
+    }
+}
