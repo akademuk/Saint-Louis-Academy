@@ -1342,3 +1342,28 @@
         max-width: 100%;
     }
 }
+
+@media (max-width: 350px) {
+    .why-section__slide {
+        max-width: 271px;
+    }
+    .why-section__slide-content {
+        width: 271px;
+    }
+    .why-section__slide-content {
+        gap: 16px;
+        padding: 16px;
+        justify-content: flex-start;
+    }
+    .why-section__slide-content div {
+        font-size: 14px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 8;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .why-section__slide-content div a{
+        font-size: 14px;
+    }
+}
