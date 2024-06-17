@@ -109,7 +109,7 @@
     line-height: 100%;
     letter-spacing: -3.6px;
     text-transform: uppercase;
-    margin-bottom: 56px;
+    margin-bottom: 46px;
 }
 
 .modal-discount__right-content h3 {
@@ -147,7 +147,6 @@
     padding-left: 27px;
     width: 100%;
     box-sizing: border-box;
-    margin-bottom: 32px;
     display: flex;
     flex-direction: column;
     gap: 16px;
