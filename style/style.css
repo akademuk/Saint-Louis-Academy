@@ -458,6 +458,8 @@
     font-family: "Golos Text", sans-serif;
     font-size: 45px;
     font-style: normal;
+    padding-left: 60px;
+    box-sizing: border-box;
     font-weight: 500;
     line-height: 110%;
     text-transform: uppercase;
@@ -468,16 +470,21 @@
 }
 
 .benefits-item {
-    padding: 32px 0;
-    max-width: 1320px;
     margin: 0 auto;
     overflow: hidden;
+    padding: 0 60px;
+    cursor: pointer;
+    max-width: 1440px;
+    transition: all 0.5s;
+}
+
+.benefits-item__box {
     border-top: 1px solid rgba(28, 27, 121, 0.10);
     border-bottom: 1px solid rgba(28, 27, 121, 0.10);
-    cursor: pointer;
     display: flex;
     gap: 16px;
-    transition: all 0.5s;
+    padding: 32px 0;
+    max-width: 100%;
 }
 
 .benefits .benefits-item:nth-of-type(2) {
@@ -562,7 +569,7 @@
     .benefits-item:hover {
         background: #1C1B79;
         max-width: 1440px;
-        padding: 32px 60px;
+        padding: 0 60px;
         transition: all 0.5s;
     }
 
@@ -742,7 +749,7 @@
 
 .tariff-plan__card-info-blue {
     max-width: 267px;
-    padding: 12px 38px;
+    padding: 12px 36px;
     height: 62px;
     box-sizing: border-box;
     color: #1C1B79;
@@ -760,11 +767,11 @@
 
 .tariff-plan__card-info-white {
     width: 270px;
-    padding: 12px 38px;
+    padding: 12px 20px;
     height: 62px;
     box-sizing: border-box;
     flex-shrink: 0;
-    border: 1px solid #FFF;
+    border: 1px solid #1C1B79;
     background: #1C1B79;
     color: #FFF;
     text-align: center;
@@ -774,6 +781,14 @@
     font-weight: 700;
     letter-spacing: 0.84px;
     text-transform: uppercase;
+}
+
+.tariff-plan__card-info-blue2 {
+    border: 1px solid #fff;
+    padding: 12px 20px;  
+}
+.tariff-plan__card-info-white2 {
+    border: 1px solid #fff; 
 }
 
 .tariff-plan__card-item:nth-last-of-type(1) {
@@ -861,6 +876,17 @@
         padding-left: 0;
     }
 
+    .benefits {
+        padding: 50px 0 0 0;
+    }
+
+    .benefits-item {
+        padding: 0 16px;
+    }
+    .benefits-item.active {
+        padding: 0 16px;
+    }
+
     .why-section {
         padding-left: 60px;
     }
@@ -882,9 +908,6 @@
         flex-direction: column;
     }
 
-    .benefits-item.active {
-        padding: 32px 16px 24px 16px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -1125,11 +1148,11 @@
         margin-bottom: 15px;
     }
 
-    .benefits-item {
-        padding: 24px 0 8px 0;
-        margin: 0 16px;
-        max-width: calc(100% - 32px);
-        box-sizing: border-box;
+
+
+    .benefits-item__box { 
+        padding: 24px 0;
+        flex-direction: column;
     }
 
     .benefits-content {
@@ -1148,13 +1171,9 @@
         letter-spacing: -0.2px;
     }
 
-    .benefits-item.active {
-        padding: 24px 16px 24px 16px;
-        margin: 0;
-        max-width: 100%;
-    }
+    
 
-    .benefits-item.active .benefits-content {
+    .benefits-item .benefits-content {
         padding-left: 40px;
     }
 
@@ -1335,11 +1354,17 @@
     .tariff-plan__box {
         padding-bottom: 150px;
     }
+    .why-section__slider {
+        overflow: visible;
+    }
 }
 
 @media (max-width: 576px) {
     .tariff-plan__card {
         max-width: 100%;
+    }
+    .why-section {
+        padding: 36px 24px 0 24px;
     }
 }
 

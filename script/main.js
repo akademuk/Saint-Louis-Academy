@@ -61,13 +61,14 @@ document.addEventListener('DOMContentLoaded', function () {
             const swiper = new Swiper(swiperElement, {
                 slidesPerView: 'auto',
                 spaceBetween: 16,
+                centeredSlides: false,
                 navigation: {
                     nextEl: nextEl,
                     prevEl: prevEl,
                 },
                 breakpoints: {
                     1280: {
-                        spaceBetween: 25,
+                        spaceBetween: 25
                     },
                 }
             });
