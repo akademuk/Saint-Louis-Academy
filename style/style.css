@@ -1148,11 +1148,10 @@
         margin-bottom: 15px;
     }
 
-
-
     .benefits-item__box { 
-        padding: 24px 0;
         flex-direction: column;
+        gap: 0;
+        padding: 0;
     }
 
     .benefits-content {
@@ -1161,6 +1160,14 @@
         font-weight: 400;
         line-height: 140%;
         letter-spacing: -0.15px;
+    }
+
+    .benefits-item.active {
+        padding-bottom: 24px;
+    }
+
+    .benefits-header {
+        padding: 24px 0 24px 0;
     }
 
     .benefits-header h3 {
@@ -1390,5 +1397,11 @@
     }
     .why-section__slide-content div a{
         font-size: 14px;
+    }
+    .why-section__slide {
+        height: 100%;
+    }
+    .why-section__slide-content {
+        height: 100%;
     }
 }

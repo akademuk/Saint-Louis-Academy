@@ -1,33 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const accordionHeaders = document.querySelectorAll('.benefits-header');
-    accordionHeaders.forEach(header => {
-        header.addEventListener('click', function () {
+    const accordionItems = document.querySelectorAll('.benefits-item');
+    
+    accordionItems.forEach(item => {
+        item.addEventListener('click', function () {
             if (window.innerWidth < 1280) {
-                const content = this.nextElementSibling;
-                const parentItem = this.closest('.benefits-item');
+                const content = this.querySelector('.benefits-content');
+                const isActive = this.classList.contains('active');
 
                 // Close all other open accordion items
-                accordionHeaders.forEach(otherHeader => {
-                    const otherContent = otherHeader.nextElementSibling;
-                    const otherParentItem = otherHeader.closest('.benefits-item');
-                    if (otherContent !== content) {
-                        otherContent.style.maxHeight = null;
-                        otherParentItem.classList.remove('active');
-                    }
+                accordionItems.forEach(otherItem => {
+                    const otherContent = otherItem.querySelector('.benefits-content');
+                    otherItem.classList.remove('active');
+                    otherContent.style.maxHeight = null;
                 });
 
                 // Toggle the clicked accordion item
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
-                    parentItem.classList.remove('active');
-                } else {
+                if (!isActive) {
                     content.style.maxHeight = content.scrollHeight + "px";
-                    parentItem.classList.add('active');
+                    this.classList.add('active');
                 }
             }
         });
     });
 });
+
 
 
 
